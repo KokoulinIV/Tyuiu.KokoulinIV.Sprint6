@@ -9,7 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.KokoulinIV.Sprint6.Task1.V9.Lib\Tyuiu.KokoulinIV.Sprint6.Task1.V9.Lib.csproj" />
+    <PackageReference Include="Chart.js" Version="3.7.1" />
+    <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tyuiu.KokoulinIV.Sprint6.Task2.V4.Lib\Tyuiu.KokoulinIV.Sprint6.Task2.V4.Lib.csproj" />
   </ItemGroup>
 
