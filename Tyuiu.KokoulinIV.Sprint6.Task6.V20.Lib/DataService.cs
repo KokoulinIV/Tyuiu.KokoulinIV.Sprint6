@@ -10,27 +10,32 @@ namespace Tyuiu.KokoulinIV.Sprint6.Task6.V20.Lib
         public string CollectTextFromFile(string path)
         {
             string resStr = "";
-            string str = " ";
+
             using (StreamReader reader = new StreamReader(path))
             {
+                int x = 0;
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (line.Contains(str))
+                    x++;
+                    if (line == "")
                     {
-                        resStr += " " + line;
+                        continue;
                     }
-                }
-                string[] array = resStr.Split(" ");
-                resStr = "";
-                for (int i = 0; i < array.Length; i++)
-                {
-                    if (i % 2 == 0)
+                    else
                     {
-                        resStr += array[i] + " ";
+                        string[] array = line.Split(' ');
+                        if (array[0] == "")
+                        {
+                            resStr += array[2] + " ";
+                        }
+                        else
+                        {
+                            resStr += array[1] + " ";
+                        }
                     }
-                }
 
+                }
             }
             return resStr;
         }
