@@ -22,7 +22,7 @@ namespace Tyuiu.KokoulinIV.Sprint6.Task6.V20
         {
             string str = " ";
             string path = Convert.ToString(openFilePath.Text);
-            textBox_Res.Text = ds.CollectTextFromFile(str, path);
+            textBox_Res.Text = ds.CollectTextFromFile( path);
         }
 
         private void button_Spr_Click(object sender, EventArgs e)
